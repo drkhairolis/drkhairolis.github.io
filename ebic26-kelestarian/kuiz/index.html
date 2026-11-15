@@ -122,17 +122,30 @@
     .question-card.correct { border-color: #83c99a; }
     .question-card.incorrect { border-color: #e8a398; }
 
+    fieldset.question-card {
+      min-width: 0;
+      margin: 0;
+    }
+
+    /* legend lalai "duduk" atas garisan sempadan fieldset — paksa ia jadi blok biasa dalam kad */
     .question-title {
+      float: left;
+      width: 100%;
       display: flex;
       align-items: flex-start;
       gap: 12px;
       margin: 0 0 14px;
+      padding: 0;
       font-size: 1.05rem;
       font-weight: 700;
+      line-height: 1.4;
     }
+
+    .question-title + .options { clear: both; }
 
     .question-number {
       display: inline-grid;
+      margin-top: 1px;
       width: 30px;
       height: 30px;
       flex: 0 0 30px;
